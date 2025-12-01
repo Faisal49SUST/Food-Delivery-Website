@@ -1,0 +1,18 @@
+time covered 4:28;
+
+//one line upload command in cmd (command promt)
+//work same as new request of thunder client
+//replace all respective -F value
+curl -X POST http://localhost:4000/api/food/add -F "name=Pizza" -F "description=Cheesy and delicious" -F "price=10" -F "category=Fast Food" -F "image=@C:\Users\Asus\OneDrive\Desktop\project2\frontend\src\assets\food_32.png"
+
+//powershell
+& "C:\Windows\System32\curl.exe" -X POST http://localhost:4000/api/food/add -F "name=Pizza" -F "description=Cheesy and delicious" -F "price=10" -F "category=Fast Food" -F "image=@C:\Users\Asus\OneDrive\Desktop\project2\frontend\src\assets\food_32.png"
+
+
+//to see list in cmd
+curl http://localhost:4000/api/food/list
+
+//to remove a food item from cmd
+//replace it with actual id 652b1f1234567890abcdef
+curl -X POST http://localhost:4000/api/food/remove -H "Content-Type: application/json" -d "{\"id\":\"652b1f1234567890abcdef\"}"
+
