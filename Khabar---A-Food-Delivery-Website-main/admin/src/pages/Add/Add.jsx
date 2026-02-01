@@ -97,6 +97,7 @@ const Add = () => {
             <p>Product category</p>
             <select
               onChange={onChangeHandler}
+              value={data.category}
               name="category"
               required
             >
